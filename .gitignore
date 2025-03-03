@@ -1,0 +1,11 @@
+output/
+wandb/
+wandb_logs/
+.env
+venv/
+__pycache__/
+.ipynb_checkpoints/
+*.pyc
+.DS_Store
+Thumbs.db
+model_api/

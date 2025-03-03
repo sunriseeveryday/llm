@@ -1,0 +1,23 @@
+{
+    "train_batch_size": 1,
+    "gradient_accumulation_steps": 1,
+    "steps_per_print": 1,
+    "zero_optimization": {
+        "stage": 3,
+        "offload_params": {
+            "device": "nvme",
+            "nvme_path": "/mnt/nvme",
+            "max_in_cpu": 10e9,
+            "offload_buffers": true,
+            "buffer_count": 4,
+            "block_size": 10000000
+        },
+        "offload_optimizer": {
+            "device": "nvme",
+            "nvme_path": "/mnt/nvme",
+            "max_in_cpu": 10e9,
+            "offload_buffers": true
+        },
+        "stage3_param_persistence": true
+    }
+}
