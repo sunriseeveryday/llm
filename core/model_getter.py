@@ -13,7 +13,7 @@ def get_model(model_name: str, bnb_config: BitsAndBytesConfig=None):
         device_map=os.getenv("DEVICE"),
         trust_remote_code=True,
         torch_dtype=getattr(torch, os.getenv("TORCH_DTYPE")),
-        bnb_config=bnb_config
+        quantization_config=bnb_config
     )
     return tokenizer, model
 

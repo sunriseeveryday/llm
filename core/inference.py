@@ -3,6 +3,7 @@ import torch
 
 def do_inference(tokenizer, model, prompt, max_length: int=4096):
     tokens = tokenizer(prompt, return_tensors='pt', padding=True, truncation=True)
+    tokens = tokens.to(model.device)
     with torch.no_grad():
         res = model.generate(
             **tokens,

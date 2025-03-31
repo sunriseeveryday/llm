@@ -30,10 +30,12 @@ def format_sample(sample):
 
 
 def evaluate_mmlu(dataset):
-    correct = []
+    predictions = []
+    labels = []
     for item in tqdm(dataset, desc="Eval"):
         prompt = format_sample(item)
-        prediction = do_inference(tokenizer, peft_model, prompt)
+        prediction = do_inference(tokenizer, peft_model, prompt, max_length=4096)
+        logging.info(f"Prediction: {prediction}")
 
         predicted_index = None
         for choice_idx in range(len(item["choices"])):
@@ -41,11 +43,10 @@ def evaluate_mmlu(dataset):
                 predicted_index = choice_idx
                 break
 
-        if predicted_index == item["answer"]:
-            correct.append(1)
-        else:
-            correct.append(0)
-        acc = accuracy.compute(predictions=correct)
+        predicted_index = 100 if predicted_index is None else predicted_index
+        predictions.append(int(predicted_index))
+        labels.append(int(item["answer"]))
+        acc = accuracy.compute(predictions=predictions, references=labels)
         logging.info(f"Accuracy: {acc['accuracy']}")
 
 
