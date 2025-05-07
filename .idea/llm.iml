@@ -5,8 +5,12 @@
       <excludeFolder url="file://$MODULE_DIR$/output" />
       <excludeFolder url="file://$MODULE_DIR$/wandb" />
       <excludeFolder url="file://$MODULE_DIR$/wandb_logs" />
+      <excludeFolder url="file://$MODULE_DIR$/.venv" />
     </content>
     <orderEntry type="jdk" jdkName="Remote Python 3.10.13 (sftp://qitao.li@172.30.173.175:22/home/qitao.li/.conda/envs/kaggle/bin/python)" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+  <component name="PackageRequirementsSettings">
+    <option name="versionSpecifier" value="大于或等于 (&gt;=x.y.z)" />
   </component>
 </module>
