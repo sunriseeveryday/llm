@@ -1,0 +1,8 @@
+model: Qwen/Qwen3-8B-AWQ
+host: "0.0.0.0"
+port: 8000
+uvicorn-log-level: "info"
+enable-reasoning: true
+reasoning-parser: deepseek_r1
+trust-remote-code: true
+max-model-len: 4096
