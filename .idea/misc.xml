@@ -3,5 +3,5 @@
   <component name="Black">
     <option name="sdkName" value="Remote Python 3.10.13 (sftp://qitao.li@172.30.173.175:22/home/qitao.li/.conda/envs/kaggle/bin/python)" />
   </component>
-  <component name="ProjectRootManager" version="2" project-jdk-name="Remote Python 3.10.13 (sftp://qitao.li@172.30.173.175:22/home/qitao.li/.conda/envs/kaggle/bin/python)" project-jdk-type="Python SDK" />
+  <component name="ProjectRootManager" version="2" project-jdk-name="uv (llm)" project-jdk-type="Python SDK" />
 </project>
