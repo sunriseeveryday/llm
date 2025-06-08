@@ -1,0 +1,1 @@
+export VLLM_USE_MODELSCOPE=True
