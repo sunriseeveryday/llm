@@ -77,7 +77,7 @@ model_name = "Qwen/Qwen3-0.6B"
 client = OpenAI(api_key=api_key, base_url=base_url)
 
 messages = [
-    {"role": "user", "content": "现在的天气是什么？"},
+    {"role": "user", "content": "现在上海的天气是什么？"},
 ]
 
 response = client.chat.completions.create(
@@ -95,4 +95,5 @@ response = client.chat.completions.create(
 )
 content = response.choices[0].message.content
 reasoning_content = response.choices[0].message.model_extra["reasoning_content"]
+tool_calls = response.choices[0].message.tool_calls
 print()
