@@ -8,6 +8,4 @@ vllm serve Qwen/Qwen3-8B \
   --tool-call-parser hermes \
   --trust-remote-code \
   --max-model-len 10240 \
-  --enable-metrics \
-  --metrics-port 8001 \
   --tensor_parallel_size 8
