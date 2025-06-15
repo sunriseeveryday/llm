@@ -1,0 +1,13 @@
+evalscope perf \
+    --parallel 1 10 50 128 200 \
+    --number 10 20 100 256 400 \
+    --model Qwen/Qwen3-8B \
+    --url http://localhost:8000/v1/chat/completions \
+    --api openai \
+    --dataset modelscope/cmmlu \
+    --wandb-api-key 'wandb_api_key' \
+    --name 'stress_qwen3_8b' \
+    --debug \
+    --log-every-n-query 10 \
+    --outputs-dir './outputs/stress/qwen3_8b' \
+    --stream
