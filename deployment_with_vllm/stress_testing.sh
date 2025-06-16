@@ -1,3 +1,4 @@
+export VLLM_USE_MODELSCOPE=True
 evalscope perf \
     --parallel 1 10 50 128 200 \
     --number 10 20 100 256 400 \
