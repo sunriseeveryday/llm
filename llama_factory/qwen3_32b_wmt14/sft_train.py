@@ -73,6 +73,8 @@ def train_sft():
         remove_unused_columns=False,
         gradient_checkpointing=True,  # 节省显存
         deepspeed="ds_config.json",  # 使用DeepSpeed
+        report_to="wandb",
+        run_name="qwen3-32b-sft-run",
     )
 
     # 数据整理器

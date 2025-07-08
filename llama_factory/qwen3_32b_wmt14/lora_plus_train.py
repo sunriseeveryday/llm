@@ -122,6 +122,8 @@ def train_lora_plus():
         fp16=True,
         dataloader_drop_last=True,
         remove_unused_columns=False,
+        report_to="wandb",
+        run_name="qwen3-32b-lora-plus-run",
     )
 
     # 数据整理器

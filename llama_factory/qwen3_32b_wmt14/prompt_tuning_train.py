@@ -85,6 +85,8 @@ def train_prompt_tuning():
         fp16=True,
         dataloader_drop_last=True,
         remove_unused_columns=False,
+        report_to="wandb",
+        run_name="qwen3-32b-prompt-tuning-run",
     )
 
     # 数据整理器
